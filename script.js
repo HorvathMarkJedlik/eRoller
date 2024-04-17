@@ -24,6 +24,8 @@ if (name.trim() !== "") {
     document.getElementById("welcomeName").style.color = "#952929";
 }
 
+// JATEK
+
 document.addEventListener('DOMContentLoaded', () => {
     const dino = document.querySelector(".dino");
     const grid = document.querySelector(".grid");
@@ -45,20 +47,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function jump(){
-        let count = 5;
+        let count = 0;
         let jumpTimerId = setInterval(() => {
-            if(count == 20){
+            if(count === 20){
                 clearInterval(jumpTimerId);
 
                 let downTimerId = setInterval(() => {
-                    if(count == 5){
+                    if(count === 0){
                         clearInterval(downTimerId);
                         isJumping = false;
                     }
                     position -= 5;
                     position = position * gravity;
                     dino.style.bottom = position + 'px';
-                    count --;
+                    count--;
                 }, 20);
             }
             position += 30;
@@ -69,37 +71,44 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function generateCactus() {
-        let randomTime = (Math.random() * 2000) + 500;
+        let randomTime = Math.random() * 2000 + 500;
         let cactusPosition = 1500;
         let cactus = document.createElement('div');
 
         if(!isGameOver){
             cactus.classList.add('cactus');
-            cactus.style.left = cactusPosition + 'px';
             grid.appendChild(cactus);
         }
 
-        let downTimerId = setInterval(() => {
-            if (cactusPosition > 0 && cactusPosition < 60 && position < 60){
-                clearInterval(downTimerId);
-                alert.innerHTML = 'Game Over! Score: ' + score;
-                isGameOver = true;
-                while(grid.firstChild){
-                    grid.removeChild(grid.lastChild);
-                }
+        let moveCactusTimerId = setInterval(() => {
+            if(isGameOver){
+                clearInterval(moveCactusTimerId);
             }
-            if(cactusPosition == 0){
-            }
-
             cactusPosition -= 10;
             cactus.style.left = cactusPosition + 'px';
-        },30);
+
+            if(cactusPosition < -60){
+                clearInterval(moveCactusTimerId);
+                grid.removeChild(cactus);
+            }
+
+            if (cactusPosition > 0 && cactusPosition < 60 && position < 60){
+                clearInterval(moveCactusTimerId);
+                alert.innerHTML = 'Game Over! Score: ' + score;
+                isGameOver = true;
+            }
+
+            if(cactusPosition === 0){
+                score++;
+                alert.innerHTML = score;
+            }
+        }, 30);
 
         if(!isGameOver){
             setTimeout(generateCactus, randomTime);
         }
     }
 
-    document.addEventListener('keyup', control)
+    document.addEventListener('keyup', control);
     generateCactus();
 });
