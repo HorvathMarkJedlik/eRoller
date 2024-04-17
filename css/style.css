@@ -1,0 +1,141 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    position: relative;
+}
+
+.welcome-message{
+    text-align: center;
+    background-color: rgb(74, 141, 115);
+    height: 700px;
+    font-size: 3rem;
+    color: rgb(102, 0, 37);
+}
+
+.animation-container {
+    text-align: center;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    background-image: url(../kepek/zold.jpg);
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.headimg {
+    background-color: #ffe4c47c;
+}
+
+main {
+    margin: auto;
+    height: auto;
+    background-color: rgb(219, 218, 218);
+    font-size: 1.2rem;
+}
+
+h1 {
+    font-family: Hedvig Letters Serif;
+}
+
+p{
+    font-family: Oswald;
+}
+
+.leiras {
+    padding: 0 50px;
+}
+
+.pic {
+    margin-top: 50px;
+}
+
+.erollers {
+    margin-left: -100px;
+}
+
+.misi {
+    float: right;
+}
+
+#info {
+    margin-top: 15px;
+}
+
+#rollerek {
+    margin-top: 80px;
+}
+
+.card-body {
+    background-color: rgb(37, 134, 87);
+}
+
+.card-text {
+    color: rgb(139, 0, 0);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.card-deck {
+    margin: auto;
+}
+
+#member-text {
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: green;
+}
+
+.nav-color {
+    background-color: green !important;
+}
+
+.iframee{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  #social {
+    margin-left: 5px;
+  }
+
+  #kozep {
+    text-align: center;
+  }
+
+
+.navbar-toggler {
+    background-color: rgb(0, 137, 44);
+}
+
+

@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(20, 81, 60, 0.814);
+}
+
+
+
+/* Definiáljuk a keyframe animációt */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+  
+  .animation-welcome {
+    opacity: 0; 
+    animation: fadeIn 1s ease-in-out forwards; /
+  }
+  #hungary{
+    opacity: 0; 
+    animation: fadeIn 1s ease-in-out forwards; /
+  }
+  .animation-choose {
+    margin-top: 50px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards; 
+    animation-delay: 1.8s; 
+  }
+  .animation-flags {
+    margin-top: 50px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards; 
+    animation-delay: 2s; 
+  }
+
+  .img-container {
+    text-align: center;
+  }
+
+
+.hungary {
+    transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+    padding: 0; /* Az eredeti padding értéke */
+}
+.hungary:hover {
+    padding: 10px;
+}
+
+.poland {
+    transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+    padding: 0; /* Az eredeti padding értéke */
+}
+.poland:hover {
+    padding: 10px;
+}
+
+#hungary{
+    display: none;
+}
