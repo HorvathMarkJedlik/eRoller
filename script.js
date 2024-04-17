@@ -108,3 +108,4 @@ document.addEventListener('keyup', control)
 generateCactus();
 });
 
+
