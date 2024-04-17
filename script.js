@@ -46,6 +46,7 @@ function control(event) {
     }
 }
 
+
 function jump(){
     let count = 5;
     let jumpTimerId = setInterval(() => {
@@ -74,6 +75,7 @@ function generateCactus() {
     let randomTime = (Math.random() * 2000) + 500;
     let cactusPosition = 1500;
     let cactus = document.createElement('div');
+    
 
     if(!isGameOver){
         cactus.classList.add('cactus');
@@ -108,6 +110,14 @@ document.addEventListener('keyup', control)
 generateCactus();
 });
 
+let restartbtn = document.getElementById("restartButton");
+restartbtn.addEventListener("click",function(){
+    DOMContentLoaded
+});
 
 
+const restartButton = document.getElementById('restartButton');
+    restartButton.addEventListener('click', () => {
+        location.reload();
+    });
 
