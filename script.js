@@ -2,30 +2,27 @@ document.addEventListener("DOMContentLoaded", function() {
     var welcomeMessage = document.getElementById("welcome-message");
     var content = document.getElementById("content");
 
-    // Időzítő az oldal először 2 másodpercig történő megjelenítéséhez
+
     setTimeout(function() {
-        // Animáció az üdvözlő üzenet eltüntetéséhez
+
         welcomeMessage.style.animation = "fadeOut 1s forwards";
 
-        // Időzítő az üzenet eltüntetése után
         setTimeout(function() {
-            // Eltávolítjuk az üdvözlő üzenetet
+
             welcomeMessage.style.display = "none";
 
-            // Animáció a tartalom megjelenítéséhez
             content.style.animation = "fadeIn 1s forwards";
-
-            // Megjelenítjük az összes weboldali tartalmat
+t
             content.style.display = "block";
-        }, 1000); // Az időzítés időtartama megegyezik az eltüntető animáció időtartamával
-    }, 2000); // Az időzítés időtartama: 2 másodperc
+        }, 1000); 
+    }, 2000);
 });
 
 
 
 function search() {
     const searchTerm = document.getElementById("searchInput").value.toLowerCase();
-    const elementsToSearch = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6, span, div"); // Itt felsorolhatod a keresendő elem típusokat
+    const elementsToSearch = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6, span, div"); 
     let count = 0;
 
     elementsToSearch.forEach(element => {
