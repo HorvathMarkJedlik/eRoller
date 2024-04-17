@@ -21,10 +21,10 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
-  <div class="animation-container">
+  <!-- <div class="animation-container">
         <h1 id="welcome-message"><br> <img src="kepek/erollers.png" alt=""><br></h1>
-    </div>
-    <div id="content" style="display:none;">
+    </div> -->
+    <!-- <div id="content" style="display:none;"> -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top navbar-inverse nav-color">
         <a class="navbar-brand" href="#">JR-Roller</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -80,29 +80,84 @@
               <div class="card-body">
                 <h5 class="card-title">Motus Scooty 10 Lite 2023 10" Elektromos roller, 350W, 20 km/h 8Ahw</h5>
                 <p class="card-text">139.999 FT</p>
-                <button type="button" class="btn btn-primary">Kibérlem</button>
+                <button type="button" class="btn btn-primary MotusScooty-button">Kibérlem</button>
 
                 
               </div>
             </div>
+
             <div class="card">
               <img class="card-img-top" src="kepek/roller2.jpg" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title">Blaupunkt ESC808EDITION Elektromos roller, max. sebesség 25 km/h (3 sebesség)</h5>
                 <p class="card-text">225.000 FT</p>
-                <button type="button" class="btn btn-primary">Kibérlem</button>
+                <button type="button" class="btn btn-primary Blaupunkt-button">Kibérlem</button>
               </div>
             </div>
+
+
             <div class="card">
               <img class="card-img-top" src="kepek/roller3.jpg" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title">Motus PRO 2022 Összecsukható elektromos roller, 10", 50 km/h, 70 km, 600W, 48V</h5>
                 <p class="card-text">345.000 FT</p>
-                <button type="button" class="btn btn-primary">Megveszem</button>
+                <button type="button" class="btn btn-primary pro-button">Megveszem</button>
               </div>
             </div>
           </div>
-          <h2 class="text-center"><b>Jelenleg 3 fajta rollerből van a raktáron.</b></h2>
+
+          <div class="Motus-Scooty">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16" class="svg-close">
+              <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+            </svg> -->
+            <div class="card">
+              <img class="card-img-top" src="kepek/roller1.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h4>Motus-Scooty</h4>
+                <label for="">Név:</label>
+                <input type="text"><br>
+                <label for="">Email:</label>
+                <input type="text"><br>
+                <button type="button" class="btn btn-primary MotusScooty-button">Küldés</button>
+                <button type="button" class="btn btn-warning svg-close">Bezár</button>
+                
+              </div>
+            </div>
+          </div>
+
+
+          <div class="Blaupunkt">
+            <div class="card">
+              <img class="card-img-top" src="kepek/roller2.jpg" alt="Card image cap">
+              <div class="card-body">
+                <label for="">Név:</label>
+                <input type="text"><br>
+                <label for="">Email:</label>
+                <input type="text"><br>
+                <button type="button" class="btn btn-primary MotusScooty-button">Küldés</button>
+                <button type="button" class="btn btn-warning Blaupunkt-close">Bezár</button>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="pro">
+            <div class="card">
+              <img class="card-img-top" src="kepek/roller3.jpg" alt="Card image cap">
+              <div class="card-body">
+                <label for="">Név:</label>
+                <input type="text"><br>
+                <label for="">Email:</label>
+                <input type="text"><br>
+                <button type="button" class="btn btn-primary pro-button">Küldés</button>
+                <button type="button" class="btn btn-warning pro-close">Bezár</button>
+                
+              </div>
+            </div>
+          </div>
+
+
+          <h2 class="text-center h2Text"><b>Jelenleg 3 fajta rollerből van a raktáron.</b></h2>
           <br>
           <h1 class="text-center" id="elerhetosegek">Elérhetőségek</h1>
             <!-- <div class="row">
@@ -124,6 +179,19 @@
       
                 </div>
             </div> -->
+
+            <h1 id="jatek">MiniGame</h1>
+            
+            <div id="desert">
+              <h2 id="alert"></h2>
+              <div class="grid">
+              <div class="dino"></div>
+              <!--
+              <div class="cactus"></div>
+              -->
+          </div>
+          <button id="restartButton">Restart</button>
+          </div>
     </main>
     </div>
 </body>
